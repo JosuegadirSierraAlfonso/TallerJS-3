@@ -44,7 +44,6 @@ let listaSedes = (elemt)=>{
 formularyCampers.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
-
     let sede = data.sede;
     delete data.sede;
     campus[`${sede}`]["camper"].unshift(data);
@@ -55,9 +54,7 @@ formularyCampers.addEventListener("submit", (e)=>{
 formularyTrainers.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
-
     let sede = data.sede;
-
     delete data.sede;
     campus[`${sede}`]["trainer"].unshift(data);
     console.log(campus);
