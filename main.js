@@ -1,11 +1,29 @@
 let myFormularioCampus = document.querySelector("#myFormularioCampus");
-let myFormularioPersonas = document.querySelector("#myFormularioPersonas");
+let formularyCampers = document.querySelector("#formularyCampers");
+let formularyTrainers = document.querySelector("#formularyTrainers");
+const select = document.querySelector("#options");
 let campus = {};
+
+select.addEventListener("change", function(){
+    if(select.value === "camper"){
+        formularyCampers.style.display = "block"
+        if(1 == 1){
+            formularyTrainers.style.display = "none"
+        }
+        
+    }
+    if (select.value === "trainer") {
+        formularyTrainers.style.display = "block"
+        if(1 == 1){
+            formularyCampers.style.display = "none"
+        }
+    }
+});
 
 myFormularioCampus.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target))
-    campus[`${data.nombreSede}`] = {Camper: [], Trainers: []};
+    campus[`${data.nombreSede}`] = {camper: [], trainer: []};
     listaSedes();
     myFormularioCampus.reset();
 })
@@ -13,20 +31,31 @@ myFormularioCampus.addEventListener("submit", (e)=>{
 let listaSedes = ()=>{
     let opciones = document.querySelector("[name='sede']");
     opciones.innerHTML = null;
-    for (let [val, id] of Object.entries(campus)) {
+    for (let [val] of Object.entries(campus)) {
         opciones.insertAdjacentHTML("beforeend", `
             <option value="${val}">${val}</option>
         `);
     }
 }
 
-myFormularioPersonas.addEventListener("submit", (e)=>{
+formularyCampers.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
     console.log(data);
     let sede = data.sede;
     delete data.sede;
-    campus[`${sede}`]["Camper"].unshift(data);
+    campus[`${sede}`]["camper"].unshift(data);
     console.log(campus);
-    myFormularioPersonas.reset();
+    formularyCampers.reset();
+})
+
+formularyTrainers.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    let data = Object.fromEntries(new FormData(e.target));
+    console.log(data);
+    let sede = data.sede;
+    delete data.sede;
+    campus[`${sede}`]["trainer"].unshift(data);
+    console.log(campus);
+    formularyTrainers.reset();
 })

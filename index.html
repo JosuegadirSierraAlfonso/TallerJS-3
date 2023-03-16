@@ -14,17 +14,67 @@
             <input type="text" name="nombreSede" placeholder="Nombre de la sedes"><br><br>
             <input type="submit" value="Guardar">
         </form>
-    </fieldset>
+    </fieldset><br>
 
-    <fieldset>
-        <legend>Datos de los campers CAMPUS:</legend>
-        <form id="myFormularioPersonas">
-            <select name="sede"></select><br>
-            <input type="text" name="nombre" placeholder="Ingrese el nombre del camper"><br>
-            <input type="tel" name="telefono" placeholder="Ingrese el telefono del camper"><br>
-            <input type="submit" value="Guardar">
-        </form>
-    </fieldset>
+    <select name="options" id="options">
+        <option value="">---Select an Option---</option>
+        <option value="camper">Camper</option>
+        <option value="trainer">Trainer</option>
+    </select><br><br>
+
+    <form id="formularyCampers">
+        <fieldset>
+            <legend>Datos de los campers CAMPUS:</legend>
+                <select name="sede"></select><br><br>
+                <input type="text" name="name" placeholder="Enter name"><br>
+                <input type="number" name="phone" placeholder="Enter phone"><br><br>
+                <label for="team">Select your team</label>
+                <select name="team" id="team">
+                    <option value="1">Team 1</option>
+                    <option value="2">Team 2</option>
+                    <option value="3">Team 3</option>
+                    <option value="4">Team 4</option>
+                </select><br><br>
+                <input type="text" name="email" placeholder="Email"><br><br>
+                <label for="level">Level</label>
+                <select name="level" id="level">
+                    <option value="">Select your level:</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select><br><br>
+                <input type="text" name="neighborhood" placeholder="Enter Neighborhood"><br><br>
+                <label for="transportation">Transportation</label>
+                <select name="transportation" id="transportation">
+                    <option value="">transportation method???:</option>
+                    <option value="car">Car</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="bicycle">Bicycle</option>
+                    <option value="public">Public Transport</option>
+                </select><br><br>
+                <input type="submit" value="Guardar">
+        </fieldset>
+    </form>
+
+
+    <form id="formularyTrainers">
+        <fieldset>
+            <legend>Datos de los Trainers CAMPUS:</legend>
+                <select name="sede"></select><br><br>
+                <input type="text" name="name" placeholder="Enter name"><br>
+                <input type="number" name="phone" placeholder="Enter phone"><br><br>
+                <label for="team">Select your team</label>
+                <select name="team" id="team">
+                    <option value="1">Team 1</option>
+                    <option value="2">Team 2</option>
+                    <option value="3">Team 3</option>
+                    <option value="4">Team 4</option>
+                </select><br><br>
+                <input type="text" name="email" placeholder="Email"><br><br>
+                <input type="submit" value="Guardar">
+        </fieldset>
+    </form>
+
 
 </body>
 </html>
