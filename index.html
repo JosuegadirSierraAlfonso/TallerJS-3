@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="main.js" defer></script>
 </head>
@@ -11,7 +12,15 @@
     <fieldset>
         <legend>Datos de contacto de las sedes de CAMPUS:</legend>
         <form id="myFormularioCampus">
-            <input type="text" name="nombreSede" placeholder="Nombre de la sedes"><br><br>
+            <select name="nombreSede" id="nombreSede">
+                <option value="">---Select an Option---</option>
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="medellin">Medellin</option>
+                <option value="bogota">Bogota</option>
+                <option value="mexico">Mexico</option>
+            </select><br><br>
+            <input type="text" name="adress" placeholder="Enter adress"><br>
+            <input type="text" name="phones" placeholder="Enter phone"><br><br>
             <input type="submit" value="Guardar">
         </form>
     </fieldset><br>
@@ -30,6 +39,7 @@
                 <input type="number" name="phone" placeholder="Enter phone"><br><br>
                 <label for="team">Select your team</label>
                 <select name="team" id="team">
+                    <option value="">Select team</option>
                     <option value="1">Team 1</option>
                     <option value="2">Team 2</option>
                     <option value="3">Team 3</option>

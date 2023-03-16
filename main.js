@@ -2,7 +2,9 @@ let myFormularioCampus = document.querySelector("#myFormularioCampus");
 let formularyCampers = document.querySelector("#formularyCampers");
 let formularyTrainers = document.querySelector("#formularyTrainers");
 const select = document.querySelector("#options");
+let opciones = document.querySelectorAll("[name='sede']");
 let campus = {};
+
 
 select.addEventListener("change", function(){
     if(select.value === "camper"){
@@ -23,16 +25,17 @@ select.addEventListener("change", function(){
 myFormularioCampus.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target))
-    campus[`${data.nombreSede}`] = {camper: [], trainer: []};
-    listaSedes();
+    campus[`${data.nombreSede}`] = {Adress: data.adress, Phone: data.phones, camper: [], trainer: []};
+    opciones.forEach((item) => {
+        listaSedes(item);
+    })
     myFormularioCampus.reset();
 })
 
-let listaSedes = ()=>{
-    let opciones = document.querySelector("[name='sede']");
-    opciones.innerHTML = null;
+let listaSedes = (elemt)=>{
+    elemt.innerHTML = null;
     for (let [val] of Object.entries(campus)) {
-        opciones.insertAdjacentHTML("beforeend", `
+        elemt.insertAdjacentHTML("beforeend", `
             <option value="${val}">${val}</option>
         `);
     }
@@ -41,7 +44,7 @@ let listaSedes = ()=>{
 formularyCampers.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
-    console.log(data);
+
     let sede = data.sede;
     delete data.sede;
     campus[`${sede}`]["camper"].unshift(data);
@@ -52,8 +55,9 @@ formularyCampers.addEventListener("submit", (e)=>{
 formularyTrainers.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
-    console.log(data);
+
     let sede = data.sede;
+
     delete data.sede;
     campus[`${sede}`]["trainer"].unshift(data);
     console.log(campus);
