@@ -17,6 +17,7 @@ body{
 }
 
 form{
+    position: relative;
     text-align: center;
     background: #fff;
     padding: 40px 0;
@@ -24,8 +25,15 @@ form{
     border-radius: 10px;
 }
 input, select{
-    width: 32%;
+    background: none;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
 }
+
 
 
 #formularyCampers{
