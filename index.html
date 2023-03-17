@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+
+    <title>Campusland</title>
     <script src="main.js" defer></script>
 </head>
+
 <body>
-    <fieldset>
-        <legend>Datos de contacto de las sedes de CAMPUS:</legend>
-        <form id="myFormularioCampus">
-            <input type="text" name="nombreSede" placeholder="Enter sede"><br><br>
-            <input type="text" name="adress" placeholder="Enter adress"><br>
-            <input type="text" name="phones" placeholder="Enter phone"><br><br>
-            <input type="submit" value="Guardar">
+
+    <div id="formMain">
+        <h1 id="title">Campusland 🚀</h1>
+        <form id="myFormularioCampus" class="form">
+            <fieldset>
+                <legend>Datos de contacto de las sedes de CAMPUS:</legend>
+
+                <input type="text" name="nombreSede" placeholder="Enter name of sede" required><br><br>
+                <input type="text" name="adress" placeholder="Enter adress" required><br>
+                <input type="text" name="phones" placeholder="Enter phone" required><br><br>
+                <input type="submit" value="Guardar" class="warnings">
         </form>
-    </fieldset><br>
+        </fieldset><br>
 
-    <select name="options" id="options">
-        <option value="">---Select an Option---</option>
-        <option value="camper">Camper</option>
-        <option value="trainer">Trainer</option>
-    </select><br><br>
+        <select name="options" id="options">
+            <option value="">---Select an Option---</option>
+            <option value="camper">Camper</option>
+            <option value="trainer">Trainer</option>
+        </select><br><br>
 
-    <form id="formularyCampers">
-        <fieldset>
-            <legend>Datos de los campers CAMPUS:</legend>
+        <form id="formularyCampers">
+            <fieldset>
+                <legend>Datos de los campers CAMPUS:</legend>
                 <select name="sede"></select><br><br>
                 <input type="text" name="name" placeholder="Enter name"><br>
 
@@ -42,7 +52,8 @@
                     <option value="Team 4">Team 4</option>
                 </select><br><br>
 
-                <input type="text" name="day" placeholder="Enter date"><br><br>
+                <label for="date">Enter date</label><br>
+                <input type="date" name="day" id="day"><br><br>
 
                 <select name="hour" id="hour">
                     <option value="">Select hour of study</option>
@@ -95,7 +106,8 @@
                     <option value="Auditorio">Auditorio</option>
                 </select><br><br>
 
-                <input type="text" name="email" placeholder="Email"><br><br>
+                <label for="email">Enter email</label><br>
+                <input type="email" name="email" placeholder="Email"><br><br>
 
                 <label for="level">Level</label><br>
                 <select name="level" id="level">
@@ -119,7 +131,8 @@
                 <label for="roadmap">Select your Roadmap</label><br>
                 <select name="roadmap" id="roadmap">
                     <option value="">Select route</option>
-                    <option value="programming Fundamental and Logical Thinking">programming Fundamental and Logical Thinking</option>
+                    <option value="programming Fundamental and Logical Thinking">programming Fundamental and Logical
+                        Thinking</option>
                     <option value="Basic programming">Basic programming</option>
                     <option value="FullStack Developer">FullStack Developer</option>
                 </select><br><br>
@@ -133,7 +146,8 @@
                 </select><br><br>
 
                 <input type="text" name="neighborhood" placeholder="Enter Neighborhood"><br><br>
-                <label for="transportation">Transportation</label>
+
+                <label for="transportation">Transportation</label><br>
                 <select name="transportation" id="transportation">
                     <option value="">transportation method???:</option>
                     <option value="car">Car</option>
@@ -142,19 +156,19 @@
                     <option value="public">Public Transport</option>
                 </select><br><br>
                 <input type="submit" value="Guardar">
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
 
 
-    <form id="formularyTrainers">
-        <fieldset>
-            <legend>Datos de los Trainers CAMPUS:</legend>
+        <form id="formularyTrainers">
+            <fieldset>
+                <legend>Datos de los Trainers CAMPUS:</legend>
                 <select name="sede"></select><br><br>
                 <input type="text" name="name" placeholder="Enter name"><br>
 
                 <input type="number" name="phone" placeholder="Enter phone"><br><br>
 
-                <label for="team">Select your team</label>
+                <label for="team">Select your team</label><br>
                 <select name="team" id="team">
                     <option value="Team 1">Team 1</option>
                     <option value="Team 2">Team 2</option>
@@ -163,17 +177,28 @@
                 </select><br><br>
 
                 <select name="hour" id="hour">
-                    <option value="">Select hour of study</option>
-                    <option value="1">6:00 - 14:00</option>
-                    <option value="2">14:00 - 22:00</option>
+                    <option value="">Select hour of class</option>
+                    <option value="6:00 - 9:30">6:00 - 9:30</option>
+                    <option value="10:00 - 12:30">10:00 - 12:30</option>
+                    <option value="14:00 - 17:30">14:00 - 17:30</option>
+                    <option value="18:00 - 21:30">18:00 - 21:30</option>
                 </select><br><br>
 
-                <input type="text" name="email" placeholder="Email"><br><br>
+                <label for="date">Enter date</label><br>
+                <input type="date" name="day" id="day"><br><br>
+
+                <label for="email">Enter email</label><br>
+                <input type="email" name="email" placeholder="Email"><br><br>
 
                 <input type="submit" value="Guardar">
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
+    </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

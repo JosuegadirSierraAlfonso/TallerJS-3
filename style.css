@@ -1,3 +1,33 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+
+
+body{
+    font-family: 'Roboto';
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form{
+    text-align: center;
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+input, select{
+    width: 32%;
+}
+
+
 #formularyCampers{
     display: none;
 }
