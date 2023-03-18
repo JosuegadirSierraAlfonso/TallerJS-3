@@ -59,4 +59,5 @@ formularyTrainers.addEventListener("submit", (e)=>{
     campus[`${sede}`]["trainer"].unshift(data);
     console.log(campus);
     formularyTrainers.reset();
-})
+}) 
+

@@ -25,7 +25,7 @@
                     <h1 id="title">Campusland 🚀</h1>
                     <form id="myFormularioCampus" class="form">
                         <fieldset>
-                            <legend>Datos de contacto de las sedes de CAMPUS:</legend>
+                            <legend>Sedes de CAMPUS:</legend>
 
                             <input type="text" name="nombreSede" placeholder="Enter name of sede" required><br><br>
                             <input type="text" name="adress" placeholder="Enter adress" required><br>
@@ -42,128 +42,128 @@
                     </select><br><br>
 
                     <form id="formularyCampers">
-                        <fieldset>
                             <legend>Datos de los campers CAMPUS:</legend>
-                            <select name="sede"></select><br><br>
+                            <select name="sede" required></select><br><br>
                             
-                            <input type="text" name="name" placeholder="Enter name"><br>
+                            <input type="text" name="name" placeholder="Enter name" required><br>
             
-                            <input type="number" name="phone" placeholder="Enter phone"><br><br>
+                            <input type="number" name="phone" placeholder="Enter phone" required><br><br><br>
             
-                            <label for="team">Select your team</label><br>
                             <select name="team" id="team">
-                                <option value="">Select team</option>
+                                <option value="">--Select your team--</option>
                                 <option value="Team 1">Team 1</option>
                                 <option value="Team 2">Team 2</option>
                                 <option value="Team 3">Team 3</option>
                                 <option value="Team 4">Team 4</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
                             <label for="date">Enter date</label><br>
-                            <input type="date" name="day" id="day"><br><br>
-            
+                            <input type="date" name="day" id="day" required><br><br><br>
+                            
+                            <label for="">Enter hour of study</label><br>
                             <select name="hour" id="hour">
-                                <option value="">Select hour of study</option>
+                                <option value="">--Select hour--</option>
                                 <option value="6:00 - 14:00">6:00 - 14:00</option>
                                 <option value="14:00 - 22:00">14:00 - 22:00</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
+                            <label for="">Enter hour of programing</label><br>
                             <select name="programing" id="programing">
-                                <option value="">Select hour of programing</option>
+                                <option value="">--Select hour--</option>
                                 <option value="6:00 - 9:30">6:00 - 9:30</option>
                                 <option value="10:00 - 13:30">10:00 - 13:30</option>
                                 <option value="14:00 - 17:30">14:00 - 17:30</option>
                                 <option value="18:00 - 21:30">18:00 - 21:30</option>
                             </select><br>
                             <select name="lounge" id="lounge">
-                                <option value="">Select lounge</option>
+                                <option value="">--Select lounge--</option>
                                 <option value="Sputnhik">Sputnhik</option>
                                 <option value="Artemis">Artemis</option>
                                 <option value="Apolo">Apolo</option>
                                 <option value="Auditorio">Auditorio</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
+                            <label for="">Enter hour of english</label><br>
                             <select name="english" id="english">
-                                <option value="">Select hour of english</option>
+                                <option value="">--Select hour--</option>
                                 <option value="9:00 - 10:00">9:00 - 10:00</option>
                                 <option value="10:00 - 11:00">10:00 - 11:00</option>
                                 <option value="17:00 - 18:00">17:00 - 18:00</option>
                                 <option value="18:00 - 19:00">18:00 - 19:00</option>
                             </select><br>
                             <select name="lounge" id="lounge">
-                                <option value="">Select lounge</option>
+                                <option value="">--Select lounge--</option>
                                 <option value="Sputnhik">Sputnhik</option>
                                 <option value="Artemis">Artemis</option>
                                 <option value="Apolo">Apolo</option>
                                 <option value="Auditorio">Auditorio</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
+                            <label for="">Enter hour of english</label><br>
                             <select name="be" id="be">
-                                <option value="">Select hour of be</option>
+                                <option value="">--Select hour--</option>
                                 <option value="8:00 - 9:00">8:00 - 9:00</option>
                                 <option value="11:00 - 12:00">11:00 - 12:00</option>
                                 <option value="16:00 - 17:00">16:00 - 17:00</option>
                                 <option value="19:00 - 20:00">19:00 - 20:00</option>
                             </select><br>
                             <select name="lounge" id="lounge">
-                                <option value="">Select lounge</option>
+                                <option value="">--Select lounge--</option>
                                 <option value="Sputnhik">Sputnhik</option>
                                 <option value="Artemis">Artemis</option>
                                 <option value="Apolo">Apolo</option>
                                 <option value="Auditorio">Auditorio</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
-                            <label for="email">Enter email</label><br>
-                            <input type="email" name="email" placeholder="Email"><br><br>
+                            <input type="email" name="email" placeholder="Email" required><br><br><br>
             
                             <label for="level">Level</label><br>
                             <select name="level" id="level">
-                                <option value="">Select your level:</option>
+                                <option value="">--Select level--</option>
                                 <option value="beginner">Beginner</option>
                                 <option value="intermediate">Intermediate</option>
                                 <option value="advanced">Advanced</option>
                             </select><br>
                             <select name="prerequisite" id="prerequisite">
-                                <option value="">Select Prerequisite:</option>
+                                <option value="">--Select Prerequisite--</option>
                                 <option value="basicProgramming">basic programming level</option>
                                 <option value="reasoning">logic reasoning</option>
                                 <option value="basicEnglish">basic English</option>
                             </select><br>
                             <select name="technology" id="technology">
-                                <option value="">Select technology:</option>
+                                <option value="">--Select technology--</option>
                                 <option value="elective">Elective</option>
                                 <option value="compulsory">Compulsory</option>
                             </select><br><br>
             
-                            <label for="roadmap">Select your Roadmap</label><br>
+                            <label for="roadmap">Roadmap</label><br>
                             <select name="roadmap" id="roadmap">
-                                <option value="">Select route</option>
+                                <option value="">--Select route--</option>
                                 <option value="programming Fundamental and Logical Thinking">programming Fundamental and Logical
                                     Thinking</option>
                                 <option value="Basic programming">Basic programming</option>
                                 <option value="FullStack Developer">FullStack Developer</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
                             <label for="credits">number of credits</label><br>
                             <select name="credits" id="credits">
-                                <option value="">Select route</option>
+                                <option value="">--Select percentage--</option>
                                 <option value="60%">60%</option>
                                 <option value="40%">40%</option>
                                 <option value="40%">40%</option>
-                            </select><br><br>
+                            </select><br><br><br>
             
                             <input type="text" name="neighborhood" placeholder="Enter Neighborhood"><br><br>
             
-                            <label for="transportation">Transportation</label><br>
-                            <select name="transportation" id="transportation">
-                                <option value="">transportation method???:</option>
+                            <label for="transportation">Transportation method</label><br>
+                            <select name="transportation" id="transportation" >
+                                <option value="">---Select an Option---</option>
                                 <option value="car">Car</option>
                                 <option value="motorcycle">Motorcycle</option>
                                 <option value="bicycle">Bicycle</option>
                                 <option value="public">Public Transport</option>
                             </select><br><br>
                             <button type="submit" value="Guardar" class="warnings">Guardar</button>
-                        </fieldset>
                     </form>
 
                     <form id="formularyTrainers">
@@ -174,8 +174,8 @@
             
                             <input type="number" name="phone" placeholder="Enter phone"><br><br>
             
-                            <label for="team">Select your team</label><br>
                             <select name="team" id="team">
+                                <option value="">--Select your team--</option>
                                 <option value="Team 1">Team 1</option>
                                 <option value="Team 2">Team 2</option>
                                 <option value="Team 3">Team 3</option>
@@ -183,7 +183,7 @@
                             </select><br><br>
             
                             <select name="hour" id="hour">
-                                <option value="">Select hour of class</option>
+                                <option value="">--Select hour of class--</option>
                                 <option value="6:00 - 9:30">6:00 - 9:30</option>
                                 <option value="10:00 - 12:30">10:00 - 12:30</option>
                                 <option value="14:00 - 17:30">14:00 - 17:30</option>
@@ -202,8 +202,6 @@
                 </div>
             </div>
         </div>
-        
-
 
         
     </div>

@@ -8,18 +8,16 @@ body{
     font-family: 'Roboto';
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 
 form{
     position: relative;
     text-align: center;
-    background: #fff;
+    background: #ffffff84;
     padding: 40px 0;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -28,13 +26,26 @@ input, select{
     background: none;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
-
     width: 80%;
     border: none;
     border-bottom: 1px solid var(--colorTextos);
+    border-radius: 10px;
 }
-
-
+button{
+    background: none;
+    border-radius: 10px;
+    border-bottom: 1px solid;
+}
+#options {
+    color: #fff;
+    background-color: #203A43;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
 
 #formularyCampers{
     display: none;
